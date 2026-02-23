@@ -1,8 +1,21 @@
 /* common styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+html, body {
+  overflow-x: hidden;
+}
+
 html{
     font-size: 62.5%;
     box-sizing: border-box;
 }
+
 
 /* 10/16 = 0.625 * 100 */
 
@@ -215,12 +228,15 @@ h1, h2, h3 {
 .header {
     margin-left: 8rem;
    height: 100vh;
+   width: 100%;
     position: relative;
     background: url(img/bg-2.jpg) center no-repeat;
     background-size: cover;
     animation: zoomIn 5s ease-out forwards;
     overflow: hidden;
-    
+     background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @keyframes zoomIn {
