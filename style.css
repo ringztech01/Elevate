@@ -278,7 +278,7 @@ h1, h2, h3 {
 .banner-heading { 
    
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(4rem, 6vw, 7rem);
+    font-size: clamp(4rem, 6vw, 6rem);
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 1rem;
@@ -309,15 +309,13 @@ h1, h2, h3 {
     max-width: 30%;
     
     
-    
-    
 }
 
 .banner-button {
     margin-right: 27rem;
     padding: 1.2rem 2rem;
     font-size: 2rem;
-    color: #333;
+    color: #333; 
     letter-spacing: .1rem;
     border: none;
     border-radius: 10rem;
@@ -2435,13 +2433,12 @@ Buttons
     /* TEAM */
 
     .team-container {
-        grid-template-columns: repeat(1, 1fr);
-        margin: auto;
-
+        .team-container {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .team-card {
-        padding-left: 15rem;
+    .team-bg-text {
+        font-size: 12rem;
     }
 
     .team-img img {
@@ -2463,16 +2460,19 @@ Buttons
   /* HEADER SECTION */
    .header {
         height: 100vh;
+        animation: none;
+        object-fit: cover;
+        
     }
 
-    @keyframes zoomIn {
+    /* @keyframes zoomIn {
   0% {
     background-size: 800%;
   }
   100% {
     background-size: 500%;
   }
-}
+} */
 
     .logo {
         z-index: 100;
@@ -2505,12 +2505,14 @@ Buttons
    /* ABOUT US SECTION */
    .about-bg-text {
     /* top: 70rem; */
-    font-size: 3.5rem;
+    font-size: 3rem;
+    top: 110%;
    }
 
    .about-header {
-    margin-top: -400rem;
+    margin-top: -390rem;
     margin-left: -15rem;
+    font-size: 1rem;
    }
 
    .about-header h2 {
@@ -2520,16 +2522,16 @@ Buttons
    }
 
    .about-header span {
-    font-size: 5rem;
+    font-size: 4rem;
    }
    .about-us-image {
     max-width: 80%;
    }
    
    .about-us-info {
-    font-size: 1.5rem;
-    margin-left: 4rem;
-    max-width: 80%;
+    font-size: 1rem;
+    margin-left: 1rem;
+    max-width: 100%;
    }
    .image-1{
     max-width: 0%;
@@ -2543,16 +2545,25 @@ Buttons
    .small-img {
     max-width: 15rem;
     max-height: 15rem;
-    
     right: 400px;
    }
 
+   .general-wrapper {
+    margin: 0;
+    width: 100%;
+   }
+
+   .about-us-paragraph {
+    font-size: 1.5rem;
+   }
    .circle-wrapper{
     width: 200px;
     height: 200px;
     top: -5rem;
-    margin-left: 10rem;
+    /* margin-left: 4rem; */
    }
+
+
 
    .center-core{
     width: 100px;
@@ -2634,13 +2645,109 @@ Buttons
    /* END OF SERVICES SECTION */
 
    /* PROJECT */
-  
+    .projects {
+        padding: 4rem 1.5rem;
+    }
+
+    .projects-layout {
+        grid-template-columns: 1fr;   /* ONE COLUMN */
+        grid-auto-rows: auto;
+        gap: 1.5rem;
+    }
+
+    /* Remove forced grid spans */
+    .feature-large,
+    .feature-medium {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    /* Remove fixed heights */
+    .feature-large,
+    .feature-medium,
+    .small {
+        height: auto;
+    }
+
+    /* Use aspect ratio instead */
+    .project {
+        aspect-ratio: 4 / 3;
+    }
+
+    .feature-large {
+        aspect-ratio: 16 / 10;
+    }
+
+    /* Image stays perfect */
+    .project img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;   /* prevents stretching */
+    }
+
+    /* Better text scaling */
+    .project-info h3 {
+        font-size: 1rem;
+    }
+
+    .feature-large .project-info h3 {
+        font-size: 1.3rem;
+    }
+}
    /* END OF PROJECT */
 
    /* TEAM */
    .team-header {
     margin-left: 10rem;
    }
+   .team-img img {
+    max-width: 100%;
+   }
+
+   .team-img {
+    max-width: 100%;
+   }
+
+   .team-info {
+    margin-left: -2.2rem;
+    margin-bottom: -3rem;
+   }
+
+   .team-info p {
+    font-size: 1rem;
+    text-align: justify;
+   }
+
+    .team-info span {
+        min-width: 40%;
+    }
+
+     .team-info h3 {
+        font-size: 1rem;
+     }
+
+     .team-card::after {
+        background: 
+  linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.4)),
+  url("your-image.jpg");
+background-size: cover;
+background-position: center;
+     }
+
+     .team-card:hover .team-info {
+    opacity: 10;
+    transform: translateY(0);
+}
+
+   .team-container {
+        grid-template-columns: 1fr;
+        margin-left: 8rem;
+        object-fit: cover;
+    }
+
+    .team-bg-text {
+        font-size: 8rem;
+    }
    /* TEAM */
 
    /* CUSTOMERS */
