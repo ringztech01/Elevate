@@ -290,6 +290,7 @@ h1, h2, h3 {
     width: 50%;
     /* margin-top: 90rem; */
     line-height: 1.1;
+    max-width: 40%;
     
 }
 
@@ -305,7 +306,7 @@ h1, h2, h3 {
     animation: fadeIn 2s ease-out forwards;
     color: #c9c9d1;
     animation-delay: 1.2s; /* delay after heading */
-    max-width: 40%;
+    max-width: 30%;
     
     
     
