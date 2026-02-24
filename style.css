@@ -226,18 +226,21 @@ h1, h2, h3 {
 /* header */
 
 .header {
-    margin-left: 8rem;
-   height: 100vh;
+    position: relative;
+    margin-left: 6rem;
+   /* height: 100vh; */
    width: 100%;
+    min-height: 100dvh;
     position: relative;
     background: url(img/bg-2.jpg) center no-repeat;
     background-size: cover;
     animation: zoomIn 5s ease-out forwards;
-    overflow: hidden;
-     background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+
 
 @keyframes zoomIn {
   0% {
@@ -2147,12 +2150,24 @@ Buttons
     }
     .banner-heading  {
     font-size: 5rem;
+    color: #f5b15c; /* Slightly richer gold */
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    letter-spacing: 0.3rem;
+    font-weight: 600;
     /* margin-right: 5rem; */
    }
+  
     .banner-paragraph {
     font-size: 1.5rem;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
+    max-width: 100px;
+    margin: 1.5rem ;
+    line-height: 1.6;
+    opacity: 0.9;
+    color: #ffffff;
    }
+   
+  
 
    .banner-button{
     margin-right: 2rem;
@@ -2163,10 +2178,20 @@ Buttons
 
     background: rgba(0, 0, 0, 0.55); /* transparency level */
 
-    backdrop-filter: blur(6px);
+    /* backdrop-filter: blur(6px); */
     -webkit-backdrop-filter: blur(6px);
 
-    /* z-index: -0; */
+    }
+
+    .header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.85)
+  );
 }
  /* HEADER SECTION END */
    /* ABOUT US SECTION */
@@ -2571,6 +2596,8 @@ Buttons
 
    .about-us-paragraph {
     font-size: 1.5rem;
+    /* margin: 4rem auto; */
+    padding-right: -62rem;
    }
    .circle-wrapper{
     width: 200px;
