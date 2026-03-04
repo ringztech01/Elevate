@@ -283,18 +283,6 @@ h1, h2, h3 {
     
 }
 
-.header-overla {
-    position: absolute;
-    inset: 0;
-
-    background: rgba(0, 0, 0, 0.55); /* transparency level */
-
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-
-    z-index: 1;
-}
-
 .banner-heading { 
    
     font-family: 'Cormorant Garamond', serif;
@@ -310,6 +298,7 @@ h1, h2, h3 {
     width: 50%;
     line-height: 1.1;
     max-width: 40%;
+    margin-right: 5rem;
     
 }
 
@@ -318,7 +307,7 @@ h1, h2, h3 {
 }
 
 .banner-paragraph {
-    margin-right: 10rem;
+    margin-right: 15rem;
     font-size: 2.8rem;
     font-weight: 500;
     opacity: 0;
@@ -331,7 +320,7 @@ h1, h2, h3 {
 }
 
 .banner-button {
-    margin-right: 27rem;
+    margin-right: 32rem;
     padding: 1.2rem 2rem;
     font-size: 2rem;
     color: #333; 
