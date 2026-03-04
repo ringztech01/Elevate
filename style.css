@@ -286,7 +286,7 @@ h1, h2, h3 {
 .banner-heading { 
    
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(4rem, 6vw, 6rem);
+    font-size: clamp(4rem, 6vw, 6.5rem);
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 1rem;
