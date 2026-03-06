@@ -53,7 +53,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         e.preventDefault();
 
         const targetId = this.getAttribute("href").substring(1);
-        smoothScrollTo(targetId, 2000);
+        smoothScrollTo(targetId, 1500);
     });
 });
 
