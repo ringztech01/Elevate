@@ -46,6 +46,17 @@ function smoothScrollTo(elementId, duration = 1000) {
 document.getElementById("viewProjectsBtn").addEventListener("click", function () {
     smoothScrollTo("projects", 2500); // duration in ms (increase for slower scroll)
 });
+
+// Apply smooth scroll to all navigation links
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute("href").substring(1);
+        smoothScrollTo(targetId, 2000);
+    });
+});
+
 // Smooth Scroll End 
 
 // Email
